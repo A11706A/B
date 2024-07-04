@@ -20,3 +20,17 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1200,
     loop: true,
   });
+
+  function openWhatsAppChat() {
+    var phoneNumber = "201098042976";  // استبدل هذا الرقم برقم هاتفك الدولي
+    var message = "مرحبًا! كيف يمكنني مساعدتك؟";  // الرسالة الافتراضية
+    var url = "https://web.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+    
+    var width = 400;
+    var height = 600;
+    var left = (screen.width - width) / 2;
+    var top = (screen.height - height) / 2;
+
+    window.open(url, 'whatsappChat', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+}
+
