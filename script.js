@@ -14,7 +14,7 @@ window.onscroll = () => {
 // Typing Text Code
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Backend Developer', '', 'Web Designer', ''],
+    strings: ['Frontend Developer', 'Social media manager', '', 'Web Designer', 'Video Editor'],
     typeSpeed: 45,
     backSpeed: 45,
     backDelay: 1200,
