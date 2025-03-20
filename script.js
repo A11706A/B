@@ -1,36 +1,53 @@
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
 menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+  menu.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
 
 window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navbar.classList.remove('active');
-}
+  menu.classList.remove("bx-x");
+  navbar.classList.remove("active");
+};
 
 // Typing Text Code
 
-const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Video Editor', '', 'Web Designer', ''],
-    typeSpeed: 45,
-    backSpeed: 45,
-    backDelay: 1200,
-    loop: true,
+const typed = new Typed(".multiple-text", {
+  strings: ["Engineer", "Front-End Developer", "Video Editor"],
+  typeSpeed: 45,
+  backSpeed: 45,
+  backDelay: 1200,
+  loop: true,
+});
+
+document
+  .getElementById("whatsapp-button")
+  .addEventListener("mouseover", function () {
+    this.style.transform = "scale(1.1)";
   });
 
-  function openWhatsAppChat() {
-    var phoneNumber = "201098042976";  // استبدل هذا الرقم برقم هاتفك الدولي
-    var message = "مرحبًا! كيف يمكنني مساعدتك؟";  // الرسالة الافتراضية
-    var url = "https://web.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
-    
-    var width = 400;
-    var height = 600;
-    var left = (screen.width - width) / 2;
-    var top = (screen.height - height) / 2;
+document
+  .getElementById("whatsapp-button")
+  .addEventListener("mouseout", function () {
+    this.style.transform = "scale(1)";
+  });
 
-    window.open(url, 'whatsappChat', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
-}
+let span = document.querySelector(".up");
 
+window.onscroll = function () {
+  this.scrollY >= 860
+    ? span.classList.add("show")
+    : span.classList.remove("show");
+};
+
+span.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
